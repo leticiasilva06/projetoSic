@@ -1,106 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>blind2024</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blind 2024</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+</head>
+<body>
 
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/teste">Teste</a></li>
+                <li><a href="/usuarios">Usuários</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        header{
-            background-color: #333333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
+    <!-- Conteúdo Principal -->
+    <main>
+        <section>
+            <h1>Blind 2024</h1>
+            <p>Registrando o mundo de forma acessível para todos.</p>
+        </section>
 
-        nav ul{
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+        <section>
+            <h2>Nossa Missão</h2>
+            <p>Nosso objetivo é tornar o mundo visual acessível para pessoas com deficiência visual. Com a tecnologia, registramos imagens e oferecemos descrições detalhadas e sensíveis ao contexto, permitindo uma melhor compreensão e inclusão.</p>
+        </section>
 
-        nav li{
-            display: inline-block;
-            margin-right: 20px;
-        }
+        <section>
+            <h2>Como Funciona</h2>
+            <p>Nossa plataforma utiliza inteligência artificial para descrever imagens e proporcionar descrições enriquecedoras para quem não pode vê-las. Carregue uma imagem ou tire uma foto, e nossa ferramenta gerará uma descrição acessível.</p>
+            <button><a href="/teste">Experimente Agora</a></button>
+        </section>
 
-        nav a{
-            color:#fff;
-            text-decoration: none;
-        }
+        <section>
+            <h2>Contribua para a Inclusão</h2>
+            <p>Junte-se à nossa comunidade de voluntários e ajude a melhorar as descrições das imagens. Sua contribuição pode fazer uma grande diferença para quem depende de descrições visuais.</p>
+            <button>Saiba Mais</button>
+        </section>
+    </main>
 
-        main{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2em;
-        }
-        
-        section{
-            background-color: #f7f7f7;
-            padding: 1em;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+    <!-- Rodapé -->
+    <footer>
+        <p class="rodap">&copy; 2024 Inclusão Visual. Todos os direitos reservados.</p>
+    </footer>
 
-        button{
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover{
-            background-color: #555;
-        }
-
-        footer{
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-            clear: both;
-        }
-
-    </style>
-    
-    <body>
-        <!-- Cabeçalho-->
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Registros</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Conteúdo Principal-->
-        <main>
-            <section>
-                <h1>Blind 2024</h1>
-                <p>Registre o mundo de forma inclusiva.</p>
-                <button>Saiba mais</button>
-                <button>Teste</button>
-                <button>Treinamento</button>
-            </section>
-        </main>
-
-        <!-- Rodapé-->
-        <footer>
-            <p>&copy;2024 - Todos os direitos reservados.</p>
-        </footer>
-    </body>
-</html> 
+</body>
+</html>

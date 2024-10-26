@@ -12,13 +12,17 @@ app = Flask(__name__)
 def homepage():
     return render_template("homepage.html")
 
-@app.route("/imagens")
+@app.route("/teste")
 def imagens():
-    return render_template("imagens.html")
+    return render_template("teste.html")
 
-@app.route("/usuarios/<nome_usuario>")
-def usuarios(nome_usuario):
-    return render_template("usuarios.html", nome_usuario=nome_usuario)
+@app.route("/usuarios")
+def usuarios():
+    return render_template("usuarios.html")
+
+@app.route("/sobre")
+def sobre():
+    return render_template("quemSomos.html")
 
 # colocar o site no ar 
 if __name__ == "__main__":
