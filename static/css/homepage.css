@@ -11,21 +11,73 @@ body {
     align-items: center;
     background-color: #f0f0f0;
     color: #000000;
+    height: 100vh;
 }
 
-header {
+nav.menu-lateral{
+    width: 80px;
+    height:100%;
     background-color: #4682B4;
-    color: #fff;
-    width: 100px;
-    height: 100vh;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #1f5683;
+
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px;
+    overflow: hidden;
+    transition: .2s;
 }
 
-header h1 {
-    font-size: 2em;
+nav.menu-lateral.expandir{
+    width: 300px;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.ativo{
+    background-color: #1f5683;
+}
+
+ul li.item-menu:hover{
+    background-color: #1f5683;
+}
+
+ul li.item-menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 40px;
+
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
 }
 
 nav ul {
