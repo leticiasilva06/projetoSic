@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribua para o Projeto Blind</title>
+    <link rel="stylesheet" href="static/css/ajuda.css">
+</head>
+<body>
+    <header>
+        <h1>Contribua para o Projeto Blind</h1>
+        <p>Ajude a tornar o mundo mais acessível para deficientes visuais</p>
+    </header>
+
+    <div class="container">
+        <!-- Introdução e formas de contribuição -->
+        <div class="intro">
+            <h2>Como você pode contribuir</h2>
+            <p>O projeto "Blind" busca melhorar a vida de pessoas com deficiência visual, proporcionando uma experiência de "ver o mundo" através de inteligência artificial e descrições contextuais. Existem várias maneiras de contribuir com o projeto:</p>
+            <ul>
+                <li><strong>Voluntariado:</strong> Auxilie na descrição de imagens para garantir que o sistema proporcione uma experiência rica e acessível.</li>
+                <li><strong>Feedback:</strong> Teste a plataforma e forneça feedback para melhorarmos continuamente.</li>
+                <li><strong>Divulgação:</strong> Compartilhe o projeto com a sua rede para que mais pessoas conheçam nossa missão e possam contribuir.</li>
+            </ul>
+        </div>
+
+        <!-- Formulário de inscrição para voluntários -->
+        <div class="form-section">
+            <h2>Inscreva-se como voluntário</h2>
+            <p>Preencha o formulário abaixo para se tornar um colaborador do projeto "Blind". Entraremos em contato com você com mais detalhes.</p>
+            <form action="/enviar-inscricao" method="POST">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="area">Área de Interesse</label>
+                    <select id="area" name="area" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="voluntariado">Voluntariado - Descrição de imagens</option>
+                        <option value="feedback">Teste e Feedback</option>
+                        <option value="divulgacao">Divulgação</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Conte-nos por que você gostaria de se juntar ao projeto"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Enviar Inscrição</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

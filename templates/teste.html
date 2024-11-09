@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>imagepage</title>
-    </head>
-    <body>
-        <p>Imagens registradas</p>
-        <iframe> </iframe>
-        <input placeholder="Que tipo de imagem?">
-        <button>Que imagem deseja capturar?</button>
-    </body>
-</html> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Imagens - Projeto Blind</title>
+    <link rel="stylesheet" href="static/css/teste.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de Imagens - Projeto Blind</h1>
+        <p>Carregue imagens para descrição e acessibilidade</p>
+    </header>
+
+    <div class="container">
+        <!-- Formulário para registro de imagem -->
+        <div class="form-section">
+            <h2>Registro de Imagens</h2>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <label for="nomeImagem">Nome da Imagem:</label>
+                <input type="text" id="nomeImagem" name="nomeImagem" placeholder="Digite o nome da imagem" required>
+
+                <label for="descricaoImagem">Descrição da Imagem:</label>
+                <input type="text" id="descricaoImagem" name="descricaoImagem" placeholder="Digite uma breve descrição" required>
+
+                <label for="uploadImagem">Selecione a Imagem:</label>
+                <input type="file" id="uploadImagem" name="uploadImagem" accept="image/*" required>
+
+                <button type="submit">Registrar Imagem</button>
+            </form>
+        </div>
+
+        <!-- Seção do iframe -->
+        <div class="iframe-section">
+            <h2>Visualização das Imagens Registradas</h2>
+            <p>Veja as imagens registradas abaixo:</p>
+            <iframe src="https://exemplo.com/galeria-imagens" title="Galeria de Imagens Registradas"></iframe>
+        </div>
+    </div>
+</body>
+</html>
+

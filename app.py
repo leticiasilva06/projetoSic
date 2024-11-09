@@ -24,9 +24,15 @@ def usuarios():
 def sobre():
     return render_template("quemSomos.html")
 
+
+@app.route('/contribuicao')
+def contribuicao():
+    return render_template("ajuda.html")
+
+
 # colocar o site no ar 
 if __name__ == "__main__":
     app.run(debug=True)
     
-    # servidor do heroku
+
    

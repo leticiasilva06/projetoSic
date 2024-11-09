@@ -1,134 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Permanent+Marker&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-body {
+.navBar {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
     align-items: center;
-    background-color: #f0f0f0;
-    color: #000000;
+    background-color: #3a527a;
+    color: white;
+}
+
+.blind {
+    font-family: "Knewave", system-ui;
+    font-weight: 400;
+    font-style: normal;     
+    text-align: center;
+    margin-left: 7%;
+}
+
+.check{
+    display: none;
+}
+
+.navBar .item ul {
+    flex-direction: column;
+    padding: 20px;
+    width: 10%;
+    position: absolute;
+    left: -100%;
+    top: 11%;
+    background-color: rgba(65, 114, 152, 45%);
     height: 100vh;
+    transition: all 0.3s ease-in-out;
+    display: none;
+    gap: 20px;
 }
 
-nav.menu-lateral{
-    width: 80px;
-    height:100%;
-    background-color: #4682B4;
-    padding: 40px 0 40px 1%;
-    box-shadow: 3px 0 0 #1f5683;
-
-    position: fixed;
-    top: 0;
+.navBar .check:checked~ .item ul {
     left: 0;
-    overflow: hidden;
-    transition: .2s;
-}
-
-nav.menu-lateral.expandir{
-    width: 300px;
-}
-
-.btn-expandir{
-    width: 100%;
-    padding-left: 10px;
-}
-
-.btn-expandir > i{
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-ul{
-    height: 100%;
-    list-style-type: none;
-}
-
-ul li.item-menu{
-    transition: .2s;
-}
-
-ul li.ativo{
-    background-color: #1f5683;
-}
-
-ul li.item-menu:hover{
-    background-color: #1f5683;
-}
-
-ul li.item-menu a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 20px 4%;
     display: flex;
-    margin-bottom: 20px;
-    line-height: 40px;
 }
 
-ul li.item-menu a .txt-link{
-    margin-left: 40px;
-
+.registro{
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center; 
+    margin-right: 35px;
+    margin: 20px auto;
 }
 
-ul li.item-menu a .icon > i{
-    font-size: 30px;
-    margin-left: 10px;
+.containerImg{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav li {
-    margin-bottom: 15px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-nav a:hover {
-    color: #ddd;
+img{
+    max-width: 500px;
+    height: auto;
+    border-radius: 60%;
+    box-shadow: 7px 6px 10px rgba(65, 114, 152, 0.664);
 }
 
 main {
-    max-width: 800px;
+    display: flex;
+    justify-content: center;
     padding: 2em;
-    text-align: center;
 }
 
-section {
-    margin-bottom: 2em;
+.container-horizontal {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.caixa-esquerda, .caixa-direita {
+    width: 45%;
+    padding: 20px;
     background-color: #fff;
-    padding: 1.5em;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-h1{
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #000000;
+    box-shadow: 0px 4px 8px rgba(21, 63, 102, 0.3);
+    border: 1.5px solid rgba(21, 63, 102, 0.623);
 }
 
 button {
@@ -140,28 +106,111 @@ button {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 15px;
-
 }
-
+    
 button:hover {
     background-color: #3f93b4;
 }
 
-button a {
+.navBar .item ul li {
+    list-style: none;
+    padding: 10px;
     color: white;
-    text-decoration: none;
+    
 }
 
-footer {
-    width: 100%;
-    background-color: #4682B4;
-    color: #fff;
+.navBar .item ul li:hover {
+    background-color: #3a527a;
+    border-radius: 5px;
+    transition: all 0.5s;
     padding: 15px;
-    text-align: center;
-    margin-top: 20px;
+    
 }
 
-.rodap{
-    line-height: 1.6;
-    color: #ffffff;
+.navBar .item ul li a {
+    text-decoration: none;
+    color: inherit;
 }
+
+.menu{
+    width: 50px;
+    height: 50px;
+    background-color: #203355;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu span{
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+
+.check:checked~ .item ul{
+    left: 0;
+    transition: 0.3s ease-in-out;
+    display: flex;
+}
+
+
+
+
+
+
+
+    
+section {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 8px 7px 5px rgba(21, 63, 102, 0.623);
+    border: 1.5px solid rgba(21, 63, 102, 0.623);
+    text-align: center;
+    display: grid;
+    place-items: center;
+    
+}
+
+
+
+.concordo{
+    display: block;
+    text-align: center;
+}
+
+.paragrafo{
+    text-align: left;
+    width: 80%;
+}
+
+.texto{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    max-width: 80%; /* Ajuste a largura conforme necessário */
+    margin-left: 20px;
+}
+     
+ 
+      button a {
+     color: white;
+     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .container-horizontal {
+        flex-direction: column;
+    }
+    .caixa-esquerda, .caixa-direita {
+        width: 100%;
+    }
+}
+
